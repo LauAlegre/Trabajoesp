@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2023 a las 04:08:52
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 17-10-2023 a las 04:34:10
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `tp1`
+-- Base de datos: `tp2`
 --
 
 -- --------------------------------------------------------
@@ -32,16 +32,16 @@ CREATE TABLE `marcas` (
   `marca` varchar(200) NOT NULL,
   `descripcion` text NOT NULL,
   `sede` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `marcas`
 --
 
 INSERT INTO `marcas` (`id_marca`, `marca`, `descripcion`, `sede`) VALUES
-(15, 'asus', 'ASUSTeK Computer, Inc. conocida simplemente como ASUS,  es una corporación multinacional de hardware, electrónica y robótica. Sus productos incluyen la producción de tarjetas madre (placas base), tarjetas gráficas, dispositivos ópticos, productos multimedia, periféricos, computadoras portátiles, netbooks, de sobremesa, servidores, estaciones de trabajo, tablets, teléfonos móviles, equipos de red, monitores, proyectores, y soluciones de refrigeración para computadoras\r\n', 'Taipéi, Taiwán'),
-(16, 'nvidia', 'Nvidia Corporation es una empresa de software y fabless que diseña unidades de procesamiento de gráficos, interfaz de programación de aplicaciones para ciencia de datos y computación de alto rendimiento, así como unidades de sistema en chip para la computación móvil y el mercado automotriz\r\n', 'Santa Clara, California, Estados Unidos'),
-(17, 'msi', 'Micro-Star International, Co. mayormente conocida por sus siglas MSI, es una empresa multinacional taiwanesa de tecnología de la información. Diseña, desarrolla y proporciona equipo informático, productos y servicios relacionados, incluyendo computadoras portátiles, placas base, tarjetas gráficas, PCs todo-en-uno, servidores, computadoras industriales, periféricos de PC y productos de infoentertainment para automóviles\r\n', 'Zhonghe District (Taiwán)');
+(15, 'Asus', 'ASUSTeK Computer, Inc. conocida simplemente como ASUS,  es una corporación multinacional de hardware, electrónica y robótica. Sus productos incluyen la producción de tarjetas madre (placas base), tarjetas gráficas, dispositivos ópticos, productos multimedia, periféricos, computadoras portátiles, netbooks, de sobremesa, servidores, estaciones de trabajo, tablets, teléfonos móviles, equipos de red, monitores, proyectores, y soluciones de refrigeración para computadoras', 'Taipéi, Taiwán'),
+(16, 'Nvidia', 'Nvidia Corporation es una empresa de software y fabless que diseña unidades de procesamiento de gráficos, interfaz de programación de aplicaciones para ciencia de datos y computación de alto rendimiento, así como unidades de sistema en chip para la computación móvil y el mercado automotriz', 'Santa Clara, California, Estados Unidos'),
+(17, 'Msi', 'Micro-Star International, Co. mayormente conocida por sus siglas MSI, es una empresa multinacional taiwanesa de tecnología de la información. Diseña, desarrolla y proporciona equipo informático, productos y servicios relacionados, incluyendo computadoras portátiles, placas base, tarjetas gráficas, PCs todo-en-uno, servidores, computadoras industriales, periféricos de PC y productos de infoentertainment para automóviles', 'Zhonghe District (Taiwán)');
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE `productos` (
   `id_marca` int(11) NOT NULL,
   `precio` int(200) NOT NULL,
   `descripcion_product` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -119,7 +119,7 @@ CREATE TABLE `usuarios` (
   `id` int(200) NOT NULL,
   `usuario` varchar(200) NOT NULL,
   `contrasena` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
