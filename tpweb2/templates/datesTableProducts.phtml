@@ -1,0 +1,47 @@
+<?php require 'templates/header-admin.phtml' ?>
+<?php require 'templates/formAddProduct.phtml' ?>
+<div class="conteiner">
+    <table>
+        <tr>
+            <th>Nombre del Producto</th>
+            <th>Tipo de Producto</th>
+            <th>Precio</th>
+            <th>Descripción del Producto</th>
+            <th>Acciones</th> <!-- Agregamos una columna para los botones de "Borrar" -->
+            <th>Acciones</th> <!-- Agregamos una columna para los botones de "Borrar" -->
+        </tr>
+        <?php foreach ($dates as $date) : ?>
+            <tr>
+                <td><?= $date->nombre_producto; ?></td>
+                <td><?= $date->tipo_de_product; ?></td>
+                <td><?= $date->precio; ?></td>
+                <td><?= $date->descripcion_product; ?></td>
+                <td>
+                    <a href="eliminar-producto/<?= $date->product_id ?>">Borrar</a>
+                </td>
+
+                <td>
+                    <a href="modificar-producto/<?= $date->product_id ?>">Modificar</a>
+                </td>
+            </tr>
+            <div>
+                <?php if ($id_modificar == $date->product_id) { ?>
+                    <form action="udapte-producto/<?= $date->product_id ?>" method="POST">
+                        <input required name="nombre" type="text" value="<?= $date->nombre_producto; ?>" class="form-control">
+                        <input required name="tipo" type="text" value="<?= $date->tipo_de_product; ?>" class="form-control">
+
+                        <input required name="precio" type="text" value="<?= $date->precio; ?>" class="form-control">
+
+                        <input required name="descripcion" type="text" value="<?= $date->descripcion_product; ?>" class="form-control">
+
+
+                        <button type="submit" class="btn btn-primary">Guardar cambio</button>
+
+                    </form>
+                <?php } ?>
+            </div>
+        <?php endforeach; ?>
+    </table>
+</div>
+
+<?php require 'templates/footer.phtml' ?>

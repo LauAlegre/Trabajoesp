@@ -1,0 +1,181 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Hacer que el cuerpo ocupe la altura completa de la ventana */
+    display: flex;
+    flex-direction: column; /* Aplicar dirección de columna para header, main y footer */
+}
+
+/* Estilos para el header */
+header {
+    background: linear-gradient(to bottom, #0054a5, #003570); /* Azul más oscuro */
+    color: #fff;
+    padding: 10px;
+    flex: 10%; /* Ocupar el 20% de la altura */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0 30px;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s; /* Transición de color al pasar el mouse */
+}
+
+nav a:hover {
+    color: #ffd700; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para el main */
+main {
+    background-color: #fff;
+    padding: 20px;
+    flex: 75%; /* Ocupar el 60% de la altura */
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: disc; /* Cambiar el tipo de marcador de viñetas */
+    list-style-type: none;
+}
+.liProducts {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+.liProducts {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.liProducts:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+.liProducts::before {
+    content: "🔹"; /* Puedes usar un icono o una imagen aquí */
+    margin-right: 5px;
+}
+.liProducts {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+    width: 100%; /* Opcional: establece el ancho de la tabla */
+}
+
+th, td {
+    border: 1px solid #000; /* Establece un borde sólido de 1 píxel en todas las celdas */
+    padding: 8px; /* Opcional: agrega espacio entre el contenido y el borde */
+    text-align: left; /* Opcional: alinea el contenido de las celdas a la izquierda */
+}
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+/* Estilos del producto */
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.product-image img {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.product-details {
+    margin-left: 20px;
+    text-align: left;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+h2 {
+    color: #ff6600;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.btn-buy {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #ff3300;
+}
+
+
+/* Estilos para el footer */
+footer {
+    background: linear-gradient(to bottom, #0054a5, #003570); /* Azul más oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    flex: 15%; /* Ocupar el 20% de la altura */
+}
+
+.redes-sociales img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+.filter-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    background-color: #325a88; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+}
+
+
+/* Estilo para el enlace activo */

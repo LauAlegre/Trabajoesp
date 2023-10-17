@@ -1,0 +1,16 @@
+<?php require 'templates/header.phtml' ?>
+
+
+
+
+
+<?php foreach ($marcas as $marca) : ?>
+    <a href="product/<?= $marca->marca; ?>">
+        <ul>
+            <li class="liProducts"><?= $marca->marca; ?></li>
+        </ul>
+    </a>
+<?php endforeach; ?>
+
+
+<?php require 'templates/footer.phtml' ?>

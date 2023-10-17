@@ -1,0 +1,32 @@
+<form action="agregar-producto" method="post">
+    <div class="form-group">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="tipo">Tipo de Producto:</label>
+        <input type="text" id="tipo" name="tipo" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="marca">Marca:</label>
+        <select name="marca" class="form-control">
+            <?php foreach ($modelMarca as $marca) : ?>
+                <option value="<?= $marca->id_marca ?>"><?= $marca->marca ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="descripcion">Descripción del Producto:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Agregar Producto</button>
+</form>

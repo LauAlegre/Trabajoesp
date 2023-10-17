@@ -1,0 +1,32 @@
+<?php require 'templates/header.phtml'; ?>
+
+<?php
+$primerElemento = $id[0];
+
+// Acceder a los valores dentro del objeto
+$nombreProducto = $primerElemento->nombre_producto;
+$precio = $primerElemento->precio;
+$descripcionProducto = $primerElemento->descripcion_product;
+?>
+
+<div class="container">
+    <div class="product">
+        <!-- <div class="product-image">
+            <img src="imagen-producto.jpg" alt="<?= $nombreProducto; ?>">
+        </div> -->
+        <div class="product-details">
+            <h1><?= $nombreProducto; ?></h1>
+            <p><?= $descripcionProducto; ?></p>
+            <h2>Precio: $<?= $precio; ?></h2>
+            <?php foreach ($brands as $brand) : ?>
+                <p>Marca: <?= $brand->descripcion; ?></p>
+                <p>Sede: <?= $brand->sede; ?></p>
+            <?php endforeach; ?>
+            <button class="btn-buy">Comprar</button>
+        </div>
+    </div>
+</div>
+
+<?php require 'templates/footer.phtml'; ?>
+
+
