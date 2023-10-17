@@ -1,0 +1,41 @@
+<?php require 'templates/header-admin.phtml' ?>
+<?php require 'templates/formAddBrands.phtml' ?>
+
+<table>
+    <tr>
+
+        <th>Marca</th>
+        <th>Sede</th>
+        <th>Descripción Marca</th> <!-- Agregamos la columna "sede" -->
+        <th>Acciones</th>
+        <th>Acciones</th>
+    </tr>
+    <?php foreach ($dates as $date) : ?>
+        <tr>
+            <td><?= $date->marca; ?></td>
+            <td><?= $date->sede; ?></td>
+            <td><?= $date->descripcion; ?></td>
+            <td>
+                <a href="eliminar-marca/<?= $date->id_marca ?>">Borrar</a>
+            </td>
+            <td>
+                <a href="modificar-marca/<?= $date->id_marca ?>">Modificar</a>
+            </td>
+        </tr>
+        <?php if ($id_modificar == $date->id_marca) { ?>
+            <form action="udapte-marca/<?= $date->id_marca ?>" method="POST">
+                <label for="marca">Marca</label>
+                <input required name="marca" type="text" value="<?= $date->marca; ?>" class="form-control">
+                <label for="sede">Sede</label>
+                <input required name="sede" type="text" value="<?= $date->sede; ?>" class="form-control">
+                <label for="descripcion">Descripcion</label>
+                <input required name="descripcion" type="text" value="<?= $date->descripcion; ?>" class="form-control">
+
+
+                <button type="submit" class="btn btn-primary">Guardar cambio</button>
+
+            </form>
+        <?php } ?>
+    <?php endforeach; ?>
+</table>
+<?php require 'templates/footer.phtml' ?>
