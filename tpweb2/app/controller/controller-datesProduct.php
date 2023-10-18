@@ -72,21 +72,4 @@ class DatesControllerProdcucts{
        
         
     }
-    // function updateCancion($id){
-    //     if ($_POST) {
-    //         $titulo = $_POST['titulo'];
-    //         $artista = $_POST['artista'];
-    //         $duracion = $_POST['duracion'];
-
-    //         if ((isset($titulo) && !empty($titulo)) && (isset($artista) && !empty($artista)) && (isset($duracion) && !empty($duracion))) {
-    //             // $this->view->showError("Debe completar todos los campos");
-    //             $this->model->updateCancion($id, $titulo, $artista, $duracion);
-    //             header('Location: ' . BASE_URL . 'abmCancion');
-    //         } else {
-    //             echo "error";
-    //         }
-    //     }
-    // }
-
-
 }
